@@ -1,0 +1,89 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Left side (School Dashboard title) */
+.navbar-left h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Right side (Navigation links) */
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.navbar-item:hover {
+    color: #f8f9fa;
+    transform: translateY(-2px);
+    background-color: #0056b3;
+}
+
+/* Navbar toggle (hamburger menu) */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    font-size: 30px;
+}
+
+/* Responsive Navbar: Stack items on smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        transform: translateY(-100%);
+    }
+
+    .navbar-right.open {
+        transform: translateY(0);
+    }
+
+    .navbar-item {
+        font-size: 18px;
+    }
+
+    .navbar-toggle {
+        display: block;
+        color: white;
+    }
+}

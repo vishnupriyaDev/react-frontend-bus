@@ -1,0 +1,77 @@
+/* Container for the drivers list */
+.drivers-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid container for cards */
+  .drivers-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  /* Styling for individual driver cards */
+  .driver-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for cards */
+  .driver-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Title */
+  .driver-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Card Content (details like bus, address, phone) */
+  .driver-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .driver-card p strong {
+    color: #333;
+  }
+  
+  /* Media query for small devices (mobile responsiveness) */
+  @media (max-width: 768px) {
+    .drivers-list-container {
+      padding: 10px;
+    }
+  
+    .driver-card {
+      padding: 15px;
+    }
+  
+    .driver-card h2 {
+      font-size: 1.2rem;
+    }
+  
+    .driver-card p {
+      font-size: 0.9rem;
+    }
+  }
+  

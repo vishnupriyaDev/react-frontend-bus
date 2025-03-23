@@ -1,0 +1,71 @@
+/* BusList.css */
+.bus-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.bus-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bus-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bus-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.bus-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.view-details {
+    font-size: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+    border: 2px solid #007BFF;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.bus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bus-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .bus-card {
+        width: 100%;
+    }
+}

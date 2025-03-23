@@ -1,0 +1,96 @@
+/* BusDetails Container */
+.bus-details-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Bus Details Section */
+.bus-details {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;  /* Increase the max-width to allow more room on larger screens */
+    box-sizing: border-box;
+}
+
+/* Bus Details Header */
+.bus-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;  /* Center-align the header */
+}
+
+/* Bus Details Paragraphs */
+.bus-details p {
+    font-size: 16px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Bus Details Links */
+.bus-details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;  /* Center-align the link */
+}
+
+.bus-details a:hover {
+    text-decoration: underline;
+}
+
+/* Map Container */
+.map-container {
+    width: 100%;
+    height: 400px; /* Set a fixed height for the map */
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bus-details-container {
+        padding: 15px;  /* Reduce padding on smaller screens */
+    }
+
+    .bus-details {
+        padding: 15px;  /* Reduce padding inside the details section */
+        max-width: 100%;  /* Allow the details section to take full width on small screens */
+        box-sizing: border-box;
+    }
+
+    .bus-details h2 {
+        font-size: 20px;  /* Make the title smaller on smaller screens */
+    }
+
+    .bus-details p {
+        font-size: 14px;  /* Make the text smaller for better readability */
+    }
+
+    .map-container {
+        height: 300px; /* Adjust map height on smaller screens */
+    }
+
+    /* Additional Media Query for very small screens */
+    @media (max-width: 480px) {
+        .bus-details h2 {
+            font-size: 18px; /* Further reduce the header size on extra small screens */
+        }
+
+        .bus-details p {
+            font-size: 13px;  /* Adjust font size further for small screens */
+        }
+    }
+}
