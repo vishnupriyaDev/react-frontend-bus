@@ -8,6 +8,7 @@ import './App.css';
 import Dashboard from './components/Dashboard';
 import DriversList from './components/DriversList';
 import PaymentsDashboard from './components/PaymentsDashboard';
+import AdminDashboard from './components/AdminDashboard';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<LoginPage/>} />
         <Route path="/register" element={<RegisterPage/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/dashboardAdmin" element={<AdminDashboard/>} />
         <Route path="/bus-list" element={<BusList/>} />
         <Route path="/bus/:busId" element={<BusDetails/>} />
        <Route path="/drivers-list" element={<DriversList />} />

@@ -4,9 +4,9 @@ import './Dashboard.css';
 
 const Dashboard = () => {
     const busList = [
-        { id: 1, busNumber: 'Bus 101', capacity: 40, driver: 'John Doe' },
-        { id: 2, busNumber: 'Bus 102', capacity: 35, driver: 'Jane Smith' },
-        { id: 3, busNumber: 'Bus 103', capacity: 50, driver: 'Mike Johnson' },
+        { id: 1, busNumber: 'Bus 101', route: 'Poonjar-college', driver: 'John Doe' },
+        { id: 2, busNumber: 'Bus 102', route: 'kajirapally - College', driver: 'Jane Smith' },
+        { id: 3, busNumber: 'Bus 103', route: 'Eratupeta - College', driver: 'Mike Johnson' },
     ];
 
     return (
@@ -19,7 +19,7 @@ const Dashboard = () => {
                         <thead>
                             <tr>
                                 <th>Bus Number</th>
-                                <th>Capacity</th>
+                                <th>Route</th>
                                 <th>Driver</th>
                             </tr>
                         </thead>
@@ -27,7 +27,7 @@ const Dashboard = () => {
                             {busList.map(bus => (
                                 <tr key={bus.id}>
                                     <td>{bus.busNumber}</td>
-                                    <td>{bus.capacity}</td>
+                                    <td>{bus.route}</td>
                                     <td>{bus.driver}</td>
                                 </tr>
                             ))}
@@ -35,10 +35,10 @@ const Dashboard = () => {
                     </table>
                 </div>
                 <div className="school-details">
-                    <h4>School Details</h4>
-                    <p>School Name: Example School</p>
-                    <p>Address: 123 School Street, City, Country</p>
-                    <p>Contact: +123 456 7890</p>
+                    <h4>College Details</h4>
+                    <p>School Name: College Of Engineering Poonjar</p>
+                    <p>Address: Poonjar Thekkekara P.O,Kottayam Dt.Kerala-686 582</p>
+                    <p>Contact: 9562401737,8547005035</p>
                 </div>
             </div>
         </>

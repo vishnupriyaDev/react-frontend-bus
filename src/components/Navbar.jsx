@@ -12,12 +12,13 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar-left">
-                <h2>School Dashboard</h2>
+                <h2>College Dashboard</h2>
             </div>
             <div className={`navbar-right ${isMenuOpen ? 'open' : ''}`}>
                 <Link to="/bus-list" className="navbar-item">Bus List</Link>
                 <Link to="/drivers-list" className="navbar-item">Drivers List</Link>
                 <Link to="/payments-dashboard" className="navbar-item">Payments Dashboard</Link>
+                <Link to="/notification" className="navbar-item">Notification</Link>
             </div>
             <div className="navbar-toggle" onClick={toggleMenu}>
                 <span className="navbar-toggle-icon">&#9776;</span>

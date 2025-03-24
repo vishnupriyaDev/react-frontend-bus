@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Import axios for making API calls
 import './LoginPage.css';
 
 const LoginPage = () => {
@@ -7,15 +8,37 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    // The handleSubmit function to handle login via API call
+    const handleSubmit = (e) => {
         e.preventDefault();
-        // Assume authentication is successful
-        // Redirect based on role
-        if (username === 'admin') {
-            navigate('/dashboard');
-        } else {
-            navigate('/dashboard');
-        }
+
+        // Prepare the data to be sent to the API
+        const loginData = {
+            username: username,
+            password: password
+        };
+
+        // API URL for login (replace with actual URL)
+        const apiUrl = 'http://127.0.0.1:8000/api/accounts/login/'; // Replace with your login API URL
+
+        // Send the login request to the backend
+        axios.post(apiUrl, loginData)
+            .then((response) => {
+                console.log('Login successful:', response.data);
+                // Assuming the response includes user data or a token
+                const userRole = response.data.userType; // Assuming the backend sends role data
+debugger;
+                // Redirect based on role
+                if (userRole === 'admin') {
+                    navigate('/dashboardAdmin'); // Redirect admin to dashboard
+                } else {
+                    navigate('/dashboard'); // Redirect student to dashboard (or another page)
+                }
+            })
+            .catch((error) => {
+                console.error('Login error:', error.response || error);
+                // Handle error (show an error message)
+            });
     };
 
     const handleRegisterRedirect = () => {
@@ -24,7 +47,7 @@ const LoginPage = () => {
 
     return (
         <div className="login-container">
-            <form onSubmit={handleLogin} className="login-form">
+            <form onSubmit={handleSubmit} className="login-form">
                 <h2 className="text-center">Login</h2>
                 <input
                     type="text"
